@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals", "prettier"],
   "plugins": ["prettier"],
   "rules": {
+    // Will highlight formatting that does not adhere to the prettier ruleset 
     "prettier/prettier": ["error", {}, { "usePrettierrc": true }] 
   }        
 }
