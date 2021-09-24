@@ -12,6 +12,8 @@ export const Theme: DefaultTheme = {
     'danger:faded': '#E98888',
     'quarternary': '#F49F85',
     'text': '#F2F4FF',
+    'text:white': '#FFFFFF',
+    'text:grey': '#647196',
   },
   fontWeight: {
     bold: 700,

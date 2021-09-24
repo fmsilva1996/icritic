@@ -13,6 +13,8 @@ declare module 'styled-components' {
       'danger:faded': string
       'quarternary': string
       'text': string
+      'text:white': string
+      'text:grey': string
     }
     fontWeight: {
       bold: number
