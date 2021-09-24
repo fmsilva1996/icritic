@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import { SButton, SText } from './styled'
+import BluntChevron from '../BluntChevron'
 
 export enum BtnType {
   Dark = 'dark',
@@ -12,14 +13,11 @@ export interface ButtonProps {
 }
 
 const BackButton: FC<ButtonProps> = ({ btnType, children }) => {
-  const src =
-    btnType === BtnType.Dark
-      ? '/icons/chevron-grey.svg'
-      : '/icons/chevron-blue.svg'
+  const colorKey = btnType === BtnType.Dark ? 'text:grey' : 'secondary'
 
   return (
     <SButton btnType={btnType}>
-      <Image src={src} alt="chevron" height="10" width="10" />
+      <BluntChevron colorKey={colorKey} />
       <SText btnType={btnType}>{children}</SText>
     </SButton>
   )
