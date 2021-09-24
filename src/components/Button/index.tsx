@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { SButton } from './styled'
 
-export enum BtnType {
+export enum BtnTypes {
   Primary = 'primary',
   Secondary = 'secondary',
   Tertiary = 'tertiary',
@@ -9,7 +9,7 @@ export enum BtnType {
 }
 
 export interface ButtonProps {
-  btnType: BtnType
+  btnType: BtnTypes
 }
 
 const Button: FC<ButtonProps> = ({ btnType, children }) => {
