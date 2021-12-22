@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { SUpVotes, SText } from './styled'
-import Chevron from '../Chevron/index'
+import Chevron from '../Chevron'
 
 const UpVotes: FC = ({ children }) => {
   return (
