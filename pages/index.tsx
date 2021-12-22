@@ -1,5 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import React from 'react'
+import MobileHeader from '@/components/MobileHeader'
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <h1>ICritic</h1>
+        <MobileHeader />
+        Content Here!
       </main>
     </div>
   )
