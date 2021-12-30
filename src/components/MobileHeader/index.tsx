@@ -4,6 +4,7 @@ import * as S from './styled'
 import { SUGGESTIONS, ROADMAP } from './data'
 import Pill from '../Pill'
 
+
 const MobileHeader: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false)
 
@@ -25,6 +26,7 @@ const MobileHeader: FC = () => {
       </S.Pointer>
     )
   }
+
 
   return (
     <>
