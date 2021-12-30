@@ -1,6 +1,8 @@
-import { FC, Fragment, useState } from 'react'
+import { FC, useState } from 'react'
 import Image from 'next/image'
 import * as S from './styled'
+import { SUGGESTIONS, ROADMAP } from './data'
+import Pill from '../Pill'
 
 const MobileHeader: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -24,12 +26,6 @@ const MobileHeader: FC = () => {
     )
   }
 
-  const renderSidebar = () => (
-    <S.Overlay>
-      <S.Sidebar>Sidebar HERE!</S.Sidebar>
-    </S.Overlay>
-  )
-
   return (
     <>
       <S.Navbar>
@@ -39,7 +35,29 @@ const MobileHeader: FC = () => {
         </div>
         {renderMenuIcon()}
       </S.Navbar>
-      {showSidebar && renderSidebar()}
+      <S.Overlay role="button" onClick={toggleSidebar} open={showSidebar} />
+      <S.Sidebar open={showSidebar}>
+        <S.Suggestions>
+          {SUGGESTIONS.map((suggestion, index) => (
+            <Pill key={`suggestion-${index}`}>{suggestion}</Pill>
+          ))}
+        </S.Suggestions>
+        <S.Roadmap>
+          <S.Header>
+            <S.SectionTitle>Roadmap</S.SectionTitle>
+            <S.Link href="#">View</S.Link>
+          </S.Header>
+          <S.List>
+            {ROADMAP.map((stage, index) => (
+              <S.ListItem key={`roadmap-${index}`}>
+                <S.Bullet colour={stage.color} />
+                <S.StageName>{stage.name}</S.StageName>
+                <S.StageCount>{stage.count}</S.StageCount>
+              </S.ListItem>
+            ))}
+          </S.List>
+        </S.Roadmap>
+      </S.Sidebar>
     </>
   )
 }
