@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import React from 'react'
 import MobileHeader from '@/components/MobileHeader'
+import ActionBar from '@/components/ActionBar'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
 
       <main>
         <MobileHeader />
+        <ActionBar />
         Content Here!
       </main>
     </div>
