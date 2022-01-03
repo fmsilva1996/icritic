@@ -12,6 +12,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  main {
+    height: 100vh;
+    background-color: #f7f8fd;
+  }
+
   button {
     background: none;
     color: inherit;

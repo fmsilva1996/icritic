@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding: 8px 24px;
   height: 56px;
   background-color: #373f68;
+  margin-bottom: 32px;
 `
 
 interface SortButtonProps {
@@ -52,7 +53,7 @@ export const Option = styled.div`
 `
 
 export const OptionCopy = styled(Body1)`
-  color: 647196;
+  color: ${({ theme }) => theme.colors['text:grey']};
 
   ${Option}:hover & {
     color: ${({ theme }) => theme.colors.primary};

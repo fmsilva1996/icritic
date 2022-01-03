@@ -3,6 +3,8 @@ import Head from 'next/head'
 import React from 'react'
 import MobileHeader from '@/components/MobileHeader'
 import ActionBar from '@/components/ActionBar'
+import SuggestionCard from '@/components/SuggestionCard'
+import { SUGGESTION } from '@/components/SuggestionCard/data'
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +19,7 @@ const Home: NextPage = () => {
       <main>
         <MobileHeader />
         <ActionBar />
-        Content Here!
+        <SuggestionCard suggestion={SUGGESTION} />
       </main>
     </div>
   )

@@ -1,8 +1,9 @@
 import { FC, useState } from 'react'
 import Image from 'next/image'
 import * as S from './styled'
-import { SUGGESTIONS, ROADMAP } from './data'
 import Pill from '../Pill'
+import { ROADMAP } from './data'
+import { SuggestionCategory } from '@/types/suggestion'
 
 const MobileHeader: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -38,8 +39,8 @@ const MobileHeader: FC = () => {
       <S.Overlay role="button" onClick={toggleSidebar} open={showSidebar} />
       <S.Sidebar open={showSidebar}>
         <S.Suggestions>
-          {SUGGESTIONS.map((suggestion, index) => (
-            <Pill key={`suggestion-${index}`}>{suggestion}</Pill>
+          {Object.entries(SuggestionCategory).map(([key, value]) => (
+            <Pill key={key}>{value}</Pill>
           ))}
         </S.Suggestions>
         <S.Roadmap>

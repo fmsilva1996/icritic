@@ -1,5 +1,3 @@
-export const SUGGESTIONS = ['All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature']
-
 export const ROADMAP = [
   {
     name: 'Planned',
