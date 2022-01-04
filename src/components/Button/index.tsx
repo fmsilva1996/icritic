@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { SButton } from './styled'
+import * as S from './styled'
 
 export enum BtnTypes {
   Primary = 'primary',
@@ -13,7 +13,7 @@ export interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ btnType, children }) => {
-  return <SButton btnType={btnType}>{children}</SButton>
+  return <S.Button btnType={btnType}>{children}</S.Button>
 }
 
 export default Button

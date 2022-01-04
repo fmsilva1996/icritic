@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Body3, H4 } from '@/styles/typography'
 
 export const Card = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 10px;
