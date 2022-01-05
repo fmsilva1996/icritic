@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Chevron from '../Chevron'
 import * as S from './styled'
 import { SORT_OPTIONS, SortOption } from './data'
-import Button, { BtnTypes } from '../Button'
+import Button, { BtnType } from '../Button'
 
 const ActionBar: FC = () => {
   const [selected, setSelected] = useState(SORT_OPTIONS[0].name)
@@ -66,7 +66,7 @@ const ActionBar: FC = () => {
         </S.SortButton>
         {expanded && renderDropdown()}
       </S.FilterDropdown>
-      <Button btnType={BtnTypes.Primary}>+ Add Feedback</Button>
+      <Button btnType={BtnType.Primary}>+ Add Feedback</Button>
     </S.Container>
   )
 }

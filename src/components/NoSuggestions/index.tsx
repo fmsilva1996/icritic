@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import * as S from './styled'
-import Button, { BtnTypes } from '../Button'
+import Button, { BtnType } from '../Button'
 
 const NoSuggestions: FC = () => (
   <S.Container>
@@ -16,7 +16,7 @@ const NoSuggestions: FC = () => (
       Got a suggestion? Found a bug that needs to be squashed? We love hearing
       about new ideas to improve our app.
     </S.Subtitle>
-    <Button btnType={BtnTypes.Primary}>+ Add Feedback</Button>
+    <Button btnType={BtnType.Primary}>+ Add Feedback</Button>
   </S.Container>
 )
 
