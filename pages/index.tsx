@@ -8,7 +8,7 @@ import { SUGGESTION } from '@/components/SuggestionCard/data'
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>ICritic</title>
         <meta name="description" content="Feedback application" />
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <ActionBar />
         <SuggestionCard suggestion={SUGGESTION} />
       </main>
-    </div>
+    </>
   )
 }
 

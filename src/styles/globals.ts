@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     height: 100vh;
+    overflow: auto;
     background-color: #f7f8fd;
   }
 
