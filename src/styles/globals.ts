@@ -26,4 +26,9 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     outline: inherit;
   }
+
+  a, a:hover, a:focus, a:active  {
+    text-decoration: none;
+    color: inherit;
+  }
 `

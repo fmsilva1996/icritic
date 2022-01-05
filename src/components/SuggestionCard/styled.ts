@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { Body3, H4 } from '@/styles/typography'
 
-export const Card = styled.div`
+export const Card = styled.a`
+  display: block;
   width: 85%;
   margin: 0 auto;
   background-color: #ffffff;
