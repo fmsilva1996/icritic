@@ -6,6 +6,7 @@ import SuggestionCard from '@/components/SuggestionCard'
 import { SUGGESTION } from '@/components/SuggestionCard/data'
 import CommentSection from '@/components/CommentSection'
 import { COMMENTS } from '@/components/CommentSection/data'
+import NewComment from '@/components/NewComment'
 
 const Feedback: FC = () => (
   <main>
@@ -17,6 +18,7 @@ const Feedback: FC = () => (
     </S.Header>
     <SuggestionCard suggestion={SUGGESTION} />
     <CommentSection comments={COMMENTS} />
+    <NewComment />
   </main>
 )
 

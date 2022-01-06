@@ -10,10 +10,13 @@ export enum BtnType {
 
 export interface ButtonProps {
   btnType: BtnType
+  type?: 'submit' | 'reset' | 'button'
 }
 
-const Button: FC<ButtonProps> = ({ btnType, children }) => {
-  return <S.Button btnType={btnType}>{children}</S.Button>
-}
+const Button: FC<ButtonProps> = ({ btnType, children, type }) => (
+  <S.Button btnType={btnType} type={type}>
+    {children}
+  </S.Button>
+)
 
 export default Button
