@@ -33,3 +33,9 @@ export const Body3 = styled.p`
   line-height: 19px;
   color: #3a4374; ;
 `
+
+export const Link = styled(Body3).attrs({
+  as: 'a',
+})`
+  color: ${({ theme }) => theme.colors.secondary};
+`

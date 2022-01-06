@@ -4,6 +4,7 @@ import * as S from './styled'
 import Pill from '../Pill'
 import { ROADMAP } from './data'
 import { SuggestionCategory } from '@/types/suggestion'
+import { Link } from '@/styles/typography'
 
 const MobileHeader: FC = () => {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -46,7 +47,7 @@ const MobileHeader: FC = () => {
         <S.Roadmap>
           <S.Header>
             <S.SectionTitle>Roadmap</S.SectionTitle>
-            <S.Link href="#">View</S.Link>
+            <Link href="#">View</Link>
           </S.Header>
           <S.List>
             {ROADMAP.map((stage, index) => (

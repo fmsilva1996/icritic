@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Body1 } from '@/styles/typography'
+import { Body1, Body3 } from '@/styles/typography'
 
 export const Navbar = styled.div`
   height: 72px;
@@ -92,14 +92,6 @@ export const SectionTitle = styled.h3`
   letter-spacing: -0.25px;
   line-height: 26px;
   color: #3a4374;
-`
-
-export const Link = styled.a`
-  margin: 0;
-  font-size: 13px;
-  font-weight: ${({ theme }) => theme.fontWeight.semibold};
-  line-height: 19px;
-  color: #4661e6;
 `
 
 export const StageName = styled(Body1)`
