@@ -1,5 +1,6 @@
 import { FC, RefObject, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import Chevron from '../Chevron'
 import * as S from './styled'
 import { SORT_OPTIONS, SortOption } from './data'
@@ -9,6 +10,7 @@ const ActionBar: FC = () => {
   const [selected, setSelected] = useState(SORT_OPTIONS[0].name)
   const [expanded, setExpanded] = useState(false)
   const dropdownRef: RefObject<HTMLDivElement> | null = useRef(null)
+  const router = useRouter()
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -28,6 +30,8 @@ const ActionBar: FC = () => {
     setSelected(option.name)
     setExpanded(false)
   }
+
+  const handleAddClick = () => router.push('/create')
 
   const isCurrentSort = (option: SortOption) => option.name === selected
 
@@ -66,7 +70,9 @@ const ActionBar: FC = () => {
         </S.SortButton>
         {expanded && renderDropdown()}
       </S.FilterDropdown>
-      <Button btnType={BtnType.Primary}>+ Add Feedback</Button>
+      <Button btnType={BtnType.Primary} handleClick={handleAddClick}>
+        + Add Feedback
+      </Button>
     </S.Container>
   )
 }
